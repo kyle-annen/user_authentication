@@ -11,10 +11,7 @@ class User < ActiveRecord::Base
 
   private
 
-    def new_remember_token
+    def self.new_remember_token
       Digest::SHA1.hexdigest(SecureRandom.urlsafe_base64.to_s)
     end
 end
-
-
-# User.create(name: "kyle", email: "t@tddd3.com", password: "foobar", password_confirmation: "foobar")

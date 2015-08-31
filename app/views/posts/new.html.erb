@@ -1,0 +1,8 @@
+<h1>Create New Post</h1>
+<%= form_for(:post, url: newpost_path) do |f| %>
+
+  <%= f.label :post_content %><br>
+  <%= f.text_field :post_content %><br><br>
+
+  <%= f.submit "Create Post", class: "btn btn-primary" %>
+<% end %>

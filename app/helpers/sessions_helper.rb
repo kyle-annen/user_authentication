@@ -9,6 +9,11 @@ module SessionsHelper
   end
 
   def log_out
-    session[:user_id] = nil
+    cookies.permanent.delete :remember_me
+    @current_user = nil
+  end
+
+  def logged_in?
+    !current_user.nil?
   end
 end
