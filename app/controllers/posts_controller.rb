@@ -4,15 +4,18 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posts = Post.all
   end
 
   def new
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new
+    @post.user = current_user
+    @post.post_content = post_params[:post_content]
     if @post.save
-      redirect_to root
+      redirect_to root_path
     elsif
       render 'new'
     end
