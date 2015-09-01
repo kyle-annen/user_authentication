@@ -32,3 +32,27 @@ header {
 .body_container {
   margin-left: 15px;
 }
+
+nav {
+  display: inline-block;
+  float:right;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+.post_time {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 12px;
+} 
+
+
+
+

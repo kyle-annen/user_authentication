@@ -2,7 +2,7 @@
 
 <% for post in @posts %>
   <div class="post_container">
-    <span class="post_author"><%=User.find_by(post.user_id).name%></span><br>
+    <span class="post_author"><%=User.find_by(post.user_id).name%></span><span class="post_time"> - <%= post.created_at.to_s[0..-8] %></span><br>
     <span class="post_content"><%=post.post_content%></span>
   </div>
 <%end%>
