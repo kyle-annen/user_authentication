@@ -1,0 +1,2 @@
+- every poster should not be kyle
+- change erb links / poster name to be dynamic with current-user
