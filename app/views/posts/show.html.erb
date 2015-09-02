@@ -3,8 +3,13 @@
 <% for post in @posts %>
   <div class="post_container">
     <span class="post_author">
-      <% author = User.find(post.user_id) %>
-      <%= author.name %></span><span class="post_time"> - 
+      <% if logged_in? %>
+        <% author = User.find(post.user_id) %>
+        <%= author.name %>
+      <% else %>
+        Anonymous
+      <% end %>
+      </span><span class="post_time"> - 
       <%= post.created_at.to_s[0..-8] %></span><br>
     <span class="post_content"><%=post.post_content%></span>
   </div>
