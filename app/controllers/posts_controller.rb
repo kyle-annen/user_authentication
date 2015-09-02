@@ -11,8 +11,9 @@ class PostsController < ApplicationController
   end
 
   def create
+    current_user
     @post = Post.new
-    @post.user = current_user
+    @post.user = @current_user
     @post.post_content = post_params[:post_content]
     if @post.save
       redirect_to root_path

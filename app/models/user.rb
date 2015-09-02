@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :posts
   before_create { self.remember_token = new_remember_token }
 
   before_save { self.email = email.downcase }
