@@ -1,5 +1,7 @@
 <h1>Posts</h1>
-
+<% if !logged_in? %>
+  <h5 style="color: lightblue;">Please log in to see the post author. </h5>
+<% end %>
 <% for post in @posts %>
   <div class="post_container">
     <span class="post_author">
